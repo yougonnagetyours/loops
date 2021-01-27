@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    //funkcje
+    let for1 = () => {
+      for (i = 20; i <= 60 ; i++) {
+        if (i%2 === 0 && i%5 === 0){
+          console.log(i);
+        }
+      }
+    }
+    let for2 = () => {
+      for (i = 50; i > 0; i--) {
+        if (i === 10) { continue; }
+          console.log(i);
+      }
+    }
+    let prostokat = () => {
+      let x = prompt("Podaj szerokość prostokąta: ");
+      let y = prompt("A teraz wysokość: ");
+
+      for(i = 1; i <= y; i++) {
+			  for(j = 1; j <= x; j++) {
+				  document.write("@ "); 
+			  }
+			  document.write("<br>"); 
+		  }	
+
+    }
+    let trojkat = () => {
+      let h = prompt("Podaj wysokośc trójkąta: ");
+
+      for(i = 1; i <= h; i++) {
+			  for(j = 1; j <= i; j++) {
+				  document.write("% "); 
+			  }
+			  document.write("<br>"); 
+		  }	
+    }
+
+    //wybór programów
+    let a = prompt(`Wybierz program:
+    1-for1
+    2-for2
+    3-prostokąt
+    4-trójkąt`);
+
+    a = a/1;
+    
+    if (a<1 || a>4) {
+      alert("Masz do wyboru liczby 1-4");
+    }
+
+    switch(a) {
+    case 1:
+      for1();
+      break;
+    case 2:
+      for2();
+      break;
+    case 3:
+      prostokat();
+      break;
+    case 4:
+      trojkat();
+      break;    
+    default:
+      // code block
+}
+
+    
+    
+
+  </script>
+</html>
